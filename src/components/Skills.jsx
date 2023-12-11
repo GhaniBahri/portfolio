@@ -18,12 +18,13 @@ import  docker from '../../public/docker.svg'
 function Skills() {
   return (
     <section className='w-full flex flex-col items-center mt-8'>
-        <h2 className='w-4/5 md:w-72 mb-40 mt-16 h-20 text-black font-extrabold text-3xl py-4 border-[6px] border-black text-center align-middle'>SKILLS</h2>
+        <h2 className='w-4/5 md:w-72 mb-40 mt-16 h-20 text-black font-extrabold text-3xl py-4 border-x-[6px] border-black text-center align-middle'>SKILLS</h2>
         <div className='w-1/2  flex flex-col items-center'>
-            <h3 className="text-xl text-left font-medium w-full pb-4 mb-6 relative after:content-[''] after:absolute after:w-full after:h-px 
-            after:bg-black after:left-0 after:bottom-0">
+            <h3 className="text-xl text-left font-medium w-full pl-4 pb-4 mb-6 relative after:content-[''] after:absolute after:w-full after:h-px 
+            after:bg-black after:left-0 after:bottom-0 before:content-[''] before:absolute before:w-[1.5px] before:h-full 
+            before:bg-black before:left-0 before:top-0">
                 Experienced with:</h3>
-            <div className='grid grid-cols-4 grid-rows-3 w-full gap-10 place-items-center'>
+            <div className='grid grid-cols-4 grid-rows-3 w-full gap-20 place-items-center'>
                 <Image className='w-20 h-20' width={10} height={10} alt='skill' src={javascript}/>
                 <Image className='w-20 h-20' width={10} height={10} alt='skill' src={vue}/>
                 <Image className='w-20 h-20' width={10} height={10} alt='skill' src={nextjs}/>
@@ -37,10 +38,11 @@ function Skills() {
                 <Image className='w-20 h-20' width={10} height={10} alt='skill' src={d3}/>
                 <Image className='w-20 h-20' width={10} height={10} alt='skill' src={figma}/>
             </div>
-            <h3 className="text-xl text-left font-medium w-full pb-4 mt-16 mb-6 relative after:content-[''] after:absolute after:w-full after:h-px 
-            after:bg-black after:left-0 after:bottom-0">
+            <h3 className="text-xl text-left font-medium w-full pl-4 pb-4 mt-16 mb-6 relative after:content-[''] after:absolute after:w-full after:h-px 
+            after:bg-black after:left-0 after:bottom-0 before:content-[''] before:absolute before:w-[1.5px] before:h-full 
+            before:bg-black before:left-0 before:top-0">
                 Also learning:</h3>
-            <div className='grid grid-cols-4 grid-rows-1 w-full gap-10 place-items-center'>
+            <div className='grid grid-cols-4 grid-rows-1 w-full gap-20 place-items-center'>
                 <Image className='w-20 h-20' width={10} height={10} alt='skill' src={typescript}/>
                 <Image className='w-20 h-20' width={10} height={10} alt='skill' src={nodejs}/>
                 <Image className='w-20 h-20' width={10} height={10} alt='skill' src={docker}/>
