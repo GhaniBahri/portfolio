@@ -11,18 +11,22 @@ import linkedin from '../../public/linkedin.svg'
 import styles from '../styles/HeroSection.module.css'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
-
+// import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
+// import { MotionPathPlugin } from 'gsap/all';
 // gsap.registerPlugin(MotionPathPlugin)
 function HeroSection() {
-  // gsap.registerPlugin(MotionPathPlugin)
   function CopyEmail(){
     navigator.clipboard.writeText('abdelghani.bahri0@gmail.com')
     alert("abdelghani.bahri0@gmail.com \n Email copied, Looking forward to hearing from you")
   }
-  const circle = useRef()
-  useGSAP(()=>{
+  useEffect(()=>{
+    const GsapMotion = require('gsap/MotionPathPlugin')
+    const {MotionPathPlugin} = GsapMotion
     gsap.registerPlugin(MotionPathPlugin);
+  }, [])
+  
+  useGSAP(()=>{
+    // gsap.registerPlugin(MotionPathPlugin);
     gsap.to(".planet1",{
       x: 45,
       y:20,

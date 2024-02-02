@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React from 'react'
+import React, {useEffect} from 'react'
 import css  from '../../public/css.svg'
 import d3  from '../../public/d3.svg'
 import firebase  from '../../public/firebase.svg'
@@ -20,9 +20,17 @@ import spaceShape2 from '../../public/spaceShape2.svg'
 import astronaut from '../../public/astronaut.svg'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
+// import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
+// import { MotionPathPlugin } from 'gsap/all';
+
 function Skills() {
-    gsap.registerPlugin(MotionPathPlugin)
+    
+  useEffect(()=>{
+    const GsapMotion = require('gsap/MotionPathPlugin')
+    const {MotionPathPlugin} = GsapMotion
+    gsap.registerPlugin(MotionPathPlugin);
+  }, [])
+  
     useGSAP(()=>{
         // gsap.registerPlugin(MotionPathPlugin);
         gsap.to(".planet1",{
