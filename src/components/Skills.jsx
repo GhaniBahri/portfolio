@@ -32,7 +32,6 @@ function Skills() {
   }, [])
   
     useGSAP(()=>{
-        // gsap.registerPlugin(MotionPathPlugin);
         gsap.to(".planet1",{
           x: 45,
           y:20,
