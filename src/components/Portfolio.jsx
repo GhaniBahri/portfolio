@@ -9,32 +9,32 @@ function Portfolio() {
     const projectList=[
         {
             name:"GO Platform",
-            link:'https://go-app.netlify.app/',
+            link:'https://go-platform.com/',
             img:go
         },
         {
             name:"Rotten Potato",
-            link:'https://potato-app.netlify.app/',
+            link:'https://movie-project-rottenpotato.vercel.app/',
             img: potato
         },
         {
             name:"Echri",
-            link:'https://echri-app.netlify.app/',
+            link:'https://e-chri.vercel.app/',
             img:echri
         },
         {
             name:"Hope Hub",
-            link:'hope-hub.vercel.app',
+            link:'https://hope-hub.vercel.app/fr',
             img:hope,
         }
     ]
   return (
-    <section className='w-full flex flex-col items-center mt-8'>
-        <h2 className='w-4/5 md:w-72 mb-40 mt-16 h-20 text-black font-extrabold text-3xl py-4 border-x-[6px] border-black text-center align-middle'>PORTFOLIO</h2>
+    <section className='w-full flex flex-col items-center mt-8 mb-16' id='portfolio'>
+        <h2 className='w-4/5 md:w-72 mb-40 mt-16 h-20 text-white font-extrabold text-3xl py-4 border-x-[6px] border-white text-center align-middle'>PORTFOLIO</h2>
         <div className='w-full  flex flex-row flex-wrap items-center justify-evenly'>
         {
             projectList.map(project=>(
-                <ProjectCard key={project.link} image={project.img} name={project.name} />
+                <ProjectCard key={project.link} image={project.img} name={project.name} link={project.link}/>
             ))
         }
         </div>
